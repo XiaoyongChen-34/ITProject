@@ -1,0 +1,42 @@
+.responsive-image {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .responsive-image {
+    display: none;
+  }
+}
+
+.img-blur {
+  filter: blur(8px);
+}
+
+.img-mask {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.image-blurred {
+  background-image: url("https://cdn.dribbble.com/users/50886/screenshots/2710024/coding.gif");
+  height: 80%;
+  width: 100%;
+  box-shadow: 0px 0px 10px 10px #fefefe inset;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heading-blurred {
+  background-image: url("../images/Homepage_heading.gif");
+  height: 50%;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

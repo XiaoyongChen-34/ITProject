@@ -1,0 +1,12 @@
+
+.problem-button .icon, .problem-button .caption {
+    transition: transform 0.3s ease;
+}
+
+.problem-button:hover .icon {
+  transform: scale(1.5);
+}
+
+.problem-button:hover .caption {
+    opacity: 0.7;
+}

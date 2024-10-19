@@ -1,0 +1,94 @@
+.rank-item {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  height: 75px;
+  box-shadow: 0 20px 40px rbga(0, 0, 0, 1);
+  background-color: aliceblue;
+}
+
+.myself {
+  background-color: beige;
+}
+
+.rank-item:hover {
+  transform: scale(1.1);
+}
+
+.rank-item .rank {
+  position: absolute;
+  right: -50px;
+  color: #03a9f4;
+  font-size: 2em;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.rank-item:hover .rank {
+  right: 40px;
+}
+
+.rank-item .name {
+  color: #000000;
+  font-size: 2em;
+  font-weight: normal;
+  transition: 0.5s;
+}
+
+.rank-item:hover .name {
+  color: #03a9f4;
+}
+
+.rank-item .score {
+  position: absolute;
+  right: 10px;
+  font-size: 2em;
+  transition: 0.5s;
+  color: #000000;
+}
+
+.rank-item:hover .score {
+  right: 20%;
+  color: #03a9f4;
+}
+
+.podium {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: 0.5s;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.podium .text {
+    font-weight: 600;
+    font-size: clamp(1px, 4vw, 80px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(212, 191, 0);
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.1s, background-position 0.1s ease;
+    background: radial-gradient(
+      circle 50px at var(--mouse-x) var(--mouse-y),
+      rgba(212, 191, 0, 1) 50px,
+      rgba(212, 191, 0, 0) 31px
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.podium:hover .text {
+    opacity: 1;
+}
